@@ -1,0 +1,15 @@
+static int maxIndexDiff(int A[], int N) { 
+        
+        int i=0, j=N-1, res = 0;
+        while(i<=j)
+        {
+            if(A[i]<=A[j]){
+                res = Math.max(res,j-i);
+                i++;
+                j=N-1;
+            }
+            else
+                j--;
+        }
+        return res;
+    }
